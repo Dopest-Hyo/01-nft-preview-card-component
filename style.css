@@ -1,0 +1,148 @@
+
+/* color */
+:root{
+  --main-BG: hsl(217, 54%, 11%);
+  --card-BG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --blue-yonder: hsl(216, 30%, 55%);
+  --aqua: hsl(178, 100%, 50%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* initialization Setting */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body{
+  background: var(--main-BG);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  background: var(--card-BG);
+  max-width: 350px;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0px 20px 25px 15px rgba(0, 0, 0, 0.05),
+  0px 40px 30px 15px rgba(0, 0, 0, 0.1),
+}
+
+.cardImg{
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cardImg::after {
+  --aqua: hsl(178, 100%, 50%, 0.5);
+  content: url(./images/icon-view.svg);
+  background: var(--aqua);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.cardImg:hover::after{
+  opacity: 1;
+}
+
+.cardImg img{
+  width: 100%;
+  display: block;
+
+}
+
+.cardDivBody{
+  padding: 23px 0;
+  border-radius: 1px solid var(--card-BG);
+  margin-bottom: 15px;
+}
+
+.cardTitle{
+  color: var(--White);
+  font-size: 22px;
+  font-weight: 500px;
+  margin-bottom: 15px;
+}
+
+.cardTitle:hover{
+  color: var(--aqua);
+}
+
+.cardContent{
+  color: var(--blue-yonder);
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 23px;
+}
+
+.cardDivBody .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardETHPrice,
+.cardCntClock {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.cardETHPrice{
+  color: var(--aqua);
+}
+
+.cardIcon{
+  margin-right: 6px;
+}
+.cardCntClock{
+  color: var(--blue-yonder);
+}
+
+.cardFooter{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cardAvatar{
+  width: 34px;
+  height: 34px;
+  border: 2px solid var(--White);
+  border-radius: 50px;
+  margin-right: 15px;
+}
+.cardAvatarName{
+  color: var(--blue-yonder);
+  font-weight: 500;
+}
+
+.cardAvatarName a{
+  color: var(--White);
+  font-weight: 400;
+}
+
+.cardAvatarName a:hover{
+  color: var(--aqua);
+}
